@@ -25,7 +25,7 @@ export function MailingListForm() {
         Trouble with the embedded form? Open it in a new tab:{" "}
         <a
           href="https://79dc596b.sibforms.com/serve/MUIFAJauWTDVYgJA6ITkjMzGhezpVlll6i67bwL67wSL82HWlTIykatxqqMGyRHf0uFxh2WIvcuztCmIOTszwAsSn6qdiBJTHBgwCJCjZIWfufAe-B49HgZigcWDtA-3r6IZQafvWTRuZ6hUMXt0KYERxUUVYsh1dEwRQdMmjDBvFOs2xSj6UJzWFdTBRyQs2UjRWsH_yxu3qB7h"
-          className="font-medium text-emerald-700 hover:text-emerald-600"
+          className="font-medium text-sky-700 hover:text-sky-600"
           target="_blank"
           rel="noreferrer"
         >

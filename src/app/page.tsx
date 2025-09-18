@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AlertTriangle, FileSignature, MailPlus, ShieldCheck, Users } from "lucide-react";
 import { MailingListForm } from "@/components/mailing-list-form";
 import { EmailTreoCta } from "@/components/email-treo-cta";
+import { AddToCalendarButton } from "@/components/add-to-calendar-button";
 
 const navigation = [
   { href: "#issue", label: "The Issue" },
@@ -191,7 +192,7 @@ export default function Home() {
     <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col gap-16 px-4 pb-24 pt-24 sm:px-8">
       <div className="fixed inset-x-0 top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-8">
-          <Link href="#hero" className="text-base font-semibold tracking-tight text-emerald-700">
+          <Link href="#hero" className="text-base font-semibold tracking-tight text-sky-700">
             Deck Defense
           </Link>
           <div className="hidden items-center gap-6 text-sm text-slate-600 sm:flex">
@@ -199,7 +200,7 @@ export default function Home() {
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-3 py-1 font-medium transition hover:bg-emerald-50 hover:text-emerald-700"
+                className="rounded-full px-3 py-1 font-medium transition hover:bg-sky-50 hover:text-sky-700"
               >
                 {item.label}
               </a>
@@ -207,7 +208,7 @@ export default function Home() {
           </div>
           <a
             href="#join"
-            className="hidden items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500 hover:text-white sm:flex"
+            className="hidden items-center gap-2 rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500 hover:text-white sm:flex"
           >
             <MailPlus size={16} />
             Join the list
@@ -220,8 +221,8 @@ export default function Home() {
         className="mt-4 grid gap-10 sm:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] sm:items-center"
       >
         <div className="space-y-6">
-          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
-            <ShieldCheck size={14} />
+          <span className="inline-flex items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
+            <ShieldCheck className="h-3.5 w-3.5 text-sky-600" />
             Protect our decks
           </span>
           <h1 className="text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
@@ -230,21 +231,24 @@ export default function Home() {
           <p className="max-w-xl text-base text-slate-600 sm:text-lg">
             Independence Avenue homeowners already reported defective decks while the CC&Rs required the HOA to cover repairs. Amendment 3 tries to rewrite that duty and charge deck owners an extra $5,700 each. Utah law says no—when a defect is identified, the duty and cost allocation vest.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#join"
-              className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500 hover:text-white"
-            >
-              <Users size={18} />
-              Build the coalition
-            </a>
-            <a
-              href="#legal"
-              className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:border-emerald-300 hover:bg-emerald-50"
-            >
-              <FileSignature size={18} />
-              Know your rights
-            </a>
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#join"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500 hover:text-white"
+              >
+                <Users size={18} />
+                Build the coalition
+              </a>
+              <a
+                href="#legal"
+                className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 px-6 py-3 text-sm font-semibold text-sky-700 transition hover:border-sky-300 hover:bg-sky-50"
+              >
+                <FileSignature size={18} />
+                Know your rights
+              </a>
+            </div>
+            <AddToCalendarButton />
           </div>
         </div>
         <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
@@ -279,24 +283,24 @@ export default function Home() {
           <h2 className="text-3xl font-semibold text-slate-900">Why the UFSA push is a problem</h2>
           <div className="grid gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-md md:grid-cols-2">
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-emerald-700">The legal reality</h3>
+              <h3 className="text-xl font-semibold text-sky-700">The legal reality</h3>
               <p className="text-sm leading-relaxed text-slate-600">
                 Once the HOA acknowledged the decks were failing—while the CC&Rs placed maintenance on the Association—the duty vested. Utah’s anti-retroactivity rule prevents the HOA from changing cost allocation for that already-identified repair. They can plan differently for future projects, but they can’t rewrite the past to bill deck owners extra.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-emerald-700">If we do nothing</h3>
+              <h3 className="text-xl font-semibold text-sky-700">If we do nothing</h3>
               <ul className="space-y-3 text-sm text-slate-600">
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500" />
                   Deck owners overpay by $5,700 each compared to the uniform assessment—roughly $550,000 in aggregate.
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500" />
                   Sets precedent to shift other “unique features” (patios, fences, carports) onto individual owners later.
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500" />
                   Owners lose leverage to demand timely repairs if the HOA escapes liability on known defects.
                 </li>
               </ul>
@@ -310,15 +314,15 @@ export default function Home() {
             {legalReferences.map((ref) => (
               <article
                 key={ref.citation}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-emerald-200 hover:shadow-md"
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-sky-200 hover:shadow-md"
               >
                 <h3 className="text-lg font-semibold text-slate-900">{ref.title}</h3>
-                <p className="mt-1 text-sm font-medium text-emerald-700">{ref.citation}</p>
+                <p className="mt-1 text-sm font-medium text-sky-700">{ref.citation}</p>
                 <p className="mt-3 text-sm text-slate-600">{ref.summary}</p>
                 <Link
                   href={ref.link}
                   target="_blank"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-600"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-sky-600"
                 >
                   Read the statute
                   <span aria-hidden>→</span>
@@ -334,13 +338,13 @@ export default function Home() {
             {timeline.map((item, index) => (
               <div
                 key={`${item.date}-${index}`}
-                className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-200 hover:shadow-md sm:flex-row sm:items-start"
+                className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-sky-200 hover:shadow-md sm:flex-row sm:items-start"
               >
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-700">
                   <span className="text-sm font-semibold">{index + 1}</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-xs uppercase tracking-[0.2em] text-emerald-700">{item.date}</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-sky-700">{item.date}</p>
                   <h3 className="mt-1 text-lg font-semibold text-slate-900">{item.title}</h3>
                   <p className="mt-2 text-sm text-slate-600">{item.detail}</p>
                 </div>
@@ -354,7 +358,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold text-slate-900">What every owner can do this week</h2>
             <a
               href="#join"
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-sm transition hover:bg-emerald-500 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-sm transition hover:bg-sky-500 hover:text-white"
             >
               Rally the list
             </a>
@@ -377,11 +381,11 @@ export default function Home() {
                 key={doc.label}
                 href={doc.href}
                 target="_blank"
-                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-emerald-200 hover:shadow-md"
+                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-sky-200 hover:shadow-md"
               >
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="text-base font-semibold text-slate-900">{doc.label}</h3>
-                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-700">
+                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
                     Open PDF
                   </span>
                 </div>
@@ -400,7 +404,7 @@ export default function Home() {
               </p>
             </div>
             <div className="hidden sm:block">
-              <ShieldCheck className="h-16 w-16 text-emerald-600" />
+              <ShieldCheck className="h-16 w-16 text-sky-600" />
             </div>
           </div>
           <MailingListForm />
@@ -437,14 +441,14 @@ export default function Home() {
           <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <a
               href="mailto:deckdefensecoalition@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-emerald-700 transition hover:border-emerald-400 hover:bg-emerald-50"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-sky-700 transition hover:border-sky-400 hover:bg-sky-50"
             >
               <MailPlus size={16} />
               deckdefensecoalition@gmail.com
             </a>
             <a
               href="#hero"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-emerald-600"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-sky-600"
             >
               Back to top →
             </a>

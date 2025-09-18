@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Deck Defense Alliance",
     images: [
       {
-        url: "https://dummyimage.com/1200x630/f8fafc/047857&text=Deck+Defense+Alliance",
+        url: "https://dummyimage.com/1200x630/f8fafc/1d4ed8&text=Deck+Defense+Alliance",
         width: 1200,
         height: 630,
         alt: "Deck Defense Alliance awareness banner",
